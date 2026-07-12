@@ -1,4 +1,5 @@
 
+import com.google.gson.Gson;
 import com.sun.net.httpserver.Headers;
 
 import javax.net.ssl.SSLContext;
@@ -19,7 +20,8 @@ import java.util.Set;
 public class Fetcher {
 
 
-    public static HttpResponse<InputStream> fetchInfo(int id) throws Exception{
+    static Gson gson = new Gson();
+    public static UserDatIITK fetchInfo(int id) throws Exception{
         Duration timeout = Duration.ofMinutes(2);
         URI uri = createURI(
                 "https",
@@ -38,14 +40,17 @@ public class Fetcher {
         });
         requestBuilder.method("GET", HttpRequest.BodyPublishers.noBody());
         var req = requestBuilder.build();
-        return client.send(req, HttpResponse.BodyHandlers.ofInputStream());
+        String s =  client.send(req, HttpResponse.BodyHandlers.ofString()).body();
+
+        return gson.fromJson(s,UserDatIITK.class);
+
     }
 
 
     private static final Headers headers = new Headers();
 
     static {
-        headers.add("Cookie",Main.cookie);
+        headers.add("Cookie","");
         headers.add("Accept-Encoding","gzip, deflate, br");
         headers.add("Priority","u=0, i");
         headers.add("Connection","keep-alive");
