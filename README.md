@@ -13,10 +13,11 @@ This vulnerability leaks data during the payments process where server is reques
 ## Setup and Usage
 
 1. Install IntelliJ IDEA IDE (It was used for this)
-2. Navigate to Maven pom.xml and install the dependencies
-3. In Main.java you'll find the sample code to work with
-4. Optionally, For observing the traffic you can start burp suite and Set Up the ProxySelector setup in Main.java file to route the requests through burp suite.
-5. Run the Main.java file
+2. Clone this repository
+3. Navigate to Maven pom.xml and install the dependencies
+4. In Main.java you'll find the sample code to work with
+5. Optionally, For observing the traffic you can start burp suite and Set Up the ProxySelector setup in Main.java file to route the requests through burp suite.
+6. Run the Main.java file
 
 ### Configuring the Proxy in `Main.java`
 You have to change the `ProxySelector` variable like this in `Main.java` file and ensure the proxy settings are pointing to your Burp Suite listener (default is usually `127.0.0.1:8080`).
