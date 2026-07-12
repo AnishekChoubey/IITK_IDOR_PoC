@@ -10,13 +10,13 @@ public class Main {
     public static ProxySelector proxySelector = null;
 
     //Uncomment the below code to route the traffic through proxy
-    /*
+
     static {
         proxySelector = ProxySelector.of(
                 new InetSocketAddress("localhost", 8080)
         );
     }
-     */
+
 
 
 
