@@ -50,7 +50,7 @@ public class Fetcher {
     private static final Headers headers = new Headers();
 
     static {
-        headers.add("Cookie","");
+        headers.add("Cookie"," JSESSIONID=9FF7896F0187625CE61A024813AB6949; CYBER-SERVERID=CY_1_0; SERVERID=2.02");
         headers.add("Accept-Encoding","gzip, deflate, br");
         headers.add("Priority","u=0, i");
         headers.add("Connection","keep-alive");

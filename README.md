@@ -1,4 +1,4 @@
-#  Public PoC: IITK IDOR Vulnerability
+#  Public PoC: IITK IDOR Vulnerability (fixed)
 
 > **Disclaimer:** The DDIA has claimed to have fixed this vulnerability, so making the PoC public is no harm to anyone and will benefit cybersecurity aspirants to understand where flaws can lie even in big institutions, IRONICALLY the ones who have launched a whole new degree for this particular field. This repo is completely for EDUCATIONAL purpose and no harm is intended. I bear no responsibility for any misuse of this as I've already reported this PoC, and apparently the bug is fixed.
 
